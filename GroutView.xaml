@@ -1,0 +1,175 @@
+﻿<Window
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Grout Column"
+    Width="380"
+    Height="330"
+    MinHeight="330"
+    MaxHeight="330"
+    Background="#F5F5F5"
+    WindowStartupLocation="CenterScreen">
+
+    <Window.Resources>
+
+        <!--  =================================  -->
+        <!--  BOTONES  -->
+        <!--  =================================  -->
+
+        <Style TargetType="Button">
+
+            <Setter Property="Height" Value="32" />
+            <Setter Property="Width" Value="100" />
+            <Setter Property="Background" Value="#C0392B" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Margin" Value="5" />
+
+        </Style>
+
+        <!--  =================================  -->
+        <!--  TEXTBOX  -->
+        <!--  =================================  -->
+
+        <Style TargetType="TextBox">
+
+            <Setter Property="Height" Value="25" />
+            <Setter Property="Margin" Value="3" />
+
+        </Style>
+
+        <!--  =================================  -->
+        <!--  COMBOBOX  -->
+        <!--  =================================  -->
+
+        <Style TargetType="ComboBox">
+
+            <Setter Property="Height" Value="25" />
+            <Setter Property="Margin" Value="3" />
+
+        </Style>
+
+        <!--  =================================  -->
+        <!--  TEXTBLOCK  -->
+        <!--  =================================  -->
+
+        <Style TargetType="TextBlock">
+
+            <Setter Property="VerticalAlignment" Value="Center" />
+
+        </Style>
+
+    </Window.Resources>
+
+
+    <Border
+        Margin="10"
+        Padding="10"
+        Background="#E6E6E6"
+        CornerRadius="8">
+
+        <Grid>
+
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="35" />
+                <RowDefinition Height="35" />
+                <RowDefinition Height="35" />
+                <RowDefinition Height="35" />
+                <RowDefinition Height="35" />
+                <RowDefinition Height="50" />
+
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+
+                <ColumnDefinition Width="170" />
+                <ColumnDefinition Width="*" />
+
+            </Grid.ColumnDefinitions>
+
+
+            <!--  =================================  -->
+            <!--  FAMILIA  -->
+            <!--  =================================  -->
+
+            <TextBlock Grid.Row="0" Text="Familia grout" />
+
+            <ComboBox
+                x:Name="cmb_family"
+                Grid.Row="0"
+                Grid.Column="1"
+                DisplayMemberPath="name" />
+
+
+            <!--  =================================  -->
+            <!--  MATERIAL  -->
+            <!--  =================================  -->
+
+            <TextBlock Grid.Row="1" Text="Material" />
+
+            <ComboBox
+                x:Name="cmb_material"
+                Grid.Row="1"
+                Grid.Column="1"
+                DisplayMemberPath="name" />
+
+
+            <!--  =================================  -->
+            <!--  ESPESOR  -->
+            <!--  =================================  -->
+
+            <TextBlock Grid.Row="2" Text="Espesor grout (mm)" />
+
+            <TextBox
+                x:Name="txt_thickness"
+                Grid.Row="2"
+                Grid.Column="1"
+                Text="50" />
+
+
+            <!--  =================================  -->
+            <!--  COMENTARIO FUTURO  -->
+            <!--  =================================  -->
+
+            <TextBlock Grid.Row="3" Text="Comentario" />
+
+            <TextBox
+                x:Name="txt_comment"
+                Grid.Row="3"
+                Grid.Column="1"
+                Text="" />
+
+
+            <!--  =================================  -->
+            <!--  ASIGNAR PARAMETROS  -->
+            <!--  =================================  -->
+
+            <CheckBox
+                x:Name="chk_parameters"
+                Grid.Row="4"
+                Grid.Column="1"
+                Content="Asignar parámetros"
+                IsChecked="True" />
+
+
+            <!--  =================================  -->
+            <!--  BOTONES  -->
+            <!--  =================================  -->
+
+            <StackPanel
+                Grid.Row="5"
+                Grid.ColumnSpan="2"
+                HorizontalAlignment="Center"
+                Orientation="Horizontal">
+
+                <Button x:Name="btn_accept" Content="Aceptar" />
+
+                <Button x:Name="btn_cancel" Content="Cancelar" />
+
+            </StackPanel>
+
+        </Grid>
+
+    </Border>
+
+</Window>
