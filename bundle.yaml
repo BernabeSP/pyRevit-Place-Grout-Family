@@ -1,0 +1,20 @@
+
+title: Place Grout Family
+
+author: Ing. Silvia Paola Pinto Bernabé
+
+tooltip: |
+  Automatically create grout elements for structural columns.
+
+  Features:
+  • Select a grout family from the loaded project families.
+  • Retrieve column dimensions using the b and h parameters.
+  • Define grout thickness in millimeters.
+  • Assign a selected material to generated grout elements.
+  • Automatically match the column position and rotation.
+  • Optionally assign grout dimensions and instance comments.
+  • Select multiple structural columns for batch creation.
+
+help_url: https://github.com/BernabeSP/pyRevit-Place-Grout-Family
+
+context: doc-project
